@@ -62,14 +62,14 @@ def flip(data):
     return data
 
 
-# Main method
+# Fuzzes `input` and returns the modified value
 def hax(input):
     if BITFLIPMODE:
         fuzzed = flip(input)
         input = fuzzed
     if RADAMSAMODE:
         try:
-            if VERBOSE:
+
                 print("[i] Radamsa input: %s" % str(input))
             cmd = [RADAMSA_PATH, '-n', '1', '-']
             p = Popen(cmd, stdin=PIPE, stdout=PIPE)
