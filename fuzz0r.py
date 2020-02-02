@@ -70,7 +70,7 @@ def hax(input):
     if RADAMSAMODE:
         try:
 
-                print("[i] Radamsa input: %s" % str(input))
+            print("[i] Radamsa input: %s" % str(input))
             cmd = [RADAMSA_PATH, '-n', '1', '-']
             p = Popen(cmd, stdin=PIPE, stdout=PIPE)
             fuzzed = p.communicate(input)[0]
